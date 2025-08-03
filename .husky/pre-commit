@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+# Husky pre-commit hook
+# Runs ESLint and Prettier on staged files.
+# If either task fails, the commit is aborted.
+
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍  Linting & formatting staged files…"
+npm run lint --if-present
+npm run format --if-present
+
+RESULT=$?
+if [ $RESULT -ne 0 ]; then
+  echo "❌  Commit aborted due to lint or format errors."
+  exit 1
+fi
+
+echo "✅  All checks passed — continuing commit."
+exit 0

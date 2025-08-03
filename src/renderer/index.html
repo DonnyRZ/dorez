@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Gemini README Generator</title>
+
+    <!-- ====================  GOOGLE FONTS  ==================== -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ====================  GLOBAL STYLES  ==================== -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- =========   Animated gradient backdrop   ========= -->
+    <div class="bg-gradient"></div>
+
+    <!-- =========   Main card   ========= -->
+    <main id="card">
+      <header>
+        <img
+          src="../../assets/logo.png"
+          alt="Gemini logo"
+          width="42"
+          height="42"
+        />
+        <h1>Instant&nbsp;README&nbsp;Generator</h1>
+        <p class="subtitle">Drop your local codebase and relax ✨</p>
+      </header>
+
+      <!-- =========   Drop-zone   ========= -->
+      <section
+        id="dropzone"
+        class="dropzone"
+        tabindex="0"
+        aria-label="Drag & drop your project folder here"
+      >
+        <div class="dz-instructions">
+          <svg
+            class="dz-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="56"
+            height="56"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 17V3m0 0L8 7m4-4 4 4M4 15a3 3 0 003 3h10a3 3 0 003-3v0"
+            />
+          </svg>
+          <p><strong>Drag a folder here</strong><br />or click to browse</p>
+        </div>
+
+        
+      </section>
+
+      <!-- =========   Progress spinner   ========= -->
+      <div id="spinner" class="spinner hidden" aria-hidden="true">
+        <div class="loader"></div>
+        <p>Generating README…</p>
+      </div>
+
+      <!-- =========   Live Markdown preview   ========= -->
+      <section id="preview" class="preview hidden" aria-live="polite">
+        <!-- Lines will be injected incrementally by renderer.js -->
+      </section>
+
+      <!-- =========   Toast   ========= -->
+      <div id="toast" class="toast hidden"></div>
+    </main>
+
+    <!-- ====================  RENDERER SCRIPT  ==================== -->
+    <script type="module" src="renderer.js"></script>
+  </body>
+</html>
