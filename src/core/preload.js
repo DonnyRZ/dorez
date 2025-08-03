@@ -1,4 +1,6 @@
 /**
+ * This file is part of the template's core. DO NOT MODIFY.
+ *
  * Preload script
  *  - Runs in an isolated context (contextIsolation: true)
  *  - Exposes a minimal, whitelisted API to the renderer

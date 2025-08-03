@@ -1,5 +1,13 @@
 
 
+/**
+ * This file is part of the template's core. DO NOT MODIFY.
+ *
+ * Local Express server for Gemini CLI integration.
+ * This server handles the communication with the Gemini CLI,
+ * ensuring proper working directory and command execution.
+ */
+
 const express = require('express');
 const { spawn } = require('child_process');
 const path = require('path');
@@ -65,7 +73,7 @@ app.post('/generate-readme', async (req, res) => {
     fs.writeFileSync(outlineTempFile, JSON.stringify(outline, null, 2));
 
     // 2. Read the base prompt instructions.
-    const promptPath = path.join(__dirname, 'src', 'prompts', 'readme-prompt.yaml');
+    const promptPath = path.join(__dirname, '..', 'prompts', 'readme-prompt.yaml');
     const promptYaml = fs.readFileSync(promptPath, 'utf8');
     const systemPrompt = promptYaml.split('content: |')[1].split('- role: user')[0].trim();
     const jsonOutline = fs.readFileSync(outlineTempFile, 'utf8');

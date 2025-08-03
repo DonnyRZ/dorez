@@ -1,4 +1,6 @@
 /**
+ * This file is part of the template's core. DO NOT MODIFY.
+ *
  * Electron main-process entry for the Gemini-CLI template.
  * ─────────────────────────────────────────────────────────
  * Responsibilities:
@@ -22,7 +24,7 @@ let serverProcess;
 /* ------------------------------------------------------------------ */
 function createWindow() {
   // Start the local server
-  serverProcess = spawn('node', [path.join(__dirname, '..', '..' , 'server.js')], { stdio: 'inherit' });
+  serverProcess = spawn('node', [path.join(__dirname, 'server.js')], { stdio: 'inherit' });
 
   serverProcess.on('error', (err) => {
     console.error('Failed to start server process:', err);
@@ -37,9 +39,13 @@ function createWindow() {
     height: 600,
     title: 'Gemini README Demo',
     webPreferences: {
+      // Security: Enable contextIsolation and disable nodeIntegration
+      // This ensures that your preload script runs in a separate context
+      // and the renderer process does not have direct access to Node.js APIs.
       contextIsolation: true,
       nodeIntegration: false,
       preload: path.join(__dirname, 'preload.js'),
+      // Security: Enable sandbox for the renderer process
       sandbox: true,
     },
   });

@@ -2,7 +2,7 @@
   "name": "gemini-electron-template",
   "version": "0.1.0",
   "description": "A minimal Electron + Gemini CLI template for instant README generation",
-  "main": "src/main/main.js",
+  "main": "src/core/main.js",
   "scripts": {
     "start": "electron-forge start",
     "make": "electron-forge make",

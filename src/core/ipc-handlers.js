@@ -1,4 +1,6 @@
 /**
+ * This file is part of the template's core. DO NOT MODIFY.
+ *
  * IPC handlers — isolated in their own module so `main.js`
  * stays small and readable.
  *

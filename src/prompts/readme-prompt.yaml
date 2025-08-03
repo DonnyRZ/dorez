@@ -2,11 +2,10 @@
 # Prompt template for Gemini CLI
 # Generates a polished README from a JSON code-outline
 # ──────────────────────────────────────────────────────────────
-# Usage (spawned by main/ipc-handlers.js):
-#   npx gemini run readme-prompt.yaml --codebase <outline.json>
-#
-# The CLI replaces `${{inputs.codebase}}` with the absolute path
-# to the outline JSON created at runtime.
+# Usage (processed by src/core/server.js):
+# The server reads this YAML file, extracts the system prompt,
+# combines it with the scanned code outline, and then passes
+# the full content to the Gemini CLI.
 # ──────────────────────────────────────────────────────────────
 
 - role: system
@@ -27,4 +26,6 @@
       politely in the “Key Features” section.
 
 - role: user
-  file: ${{inputs.codebase}}   # ← injected JSON outline of the folder
+  content: |
+    Here is the codebase summary:
+    # The actual JSON outline will be injected here by the server.js

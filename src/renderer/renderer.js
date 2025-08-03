@@ -1,14 +1,8 @@
-/* -------------------------------------------------------------
-   Gemini README Demo - Renderer
-   -------------------------------------------------------------
-   – Handles folder selection via native dialog
-   – Streams Markdown preview while Gemini generates it
-   – Shows spinner + toast notifications
-   – Communicates with main process via the safe `window.api` bridge
-   Docs/inspiration:
-   • Secure IPC with contextBridge → electronjs.org/docs/latest/tutorial/ipc
-   • Toast UX patterns → Bootstrap toasts docs
-----------------------------------------------------------------*/
+/*
+ * This is the main renderer process script for your application.
+ * Interact with the Electron main process via `window.api`.
+ * Build your UI and application logic here.
+ */
 
 const dropzone = document.getElementById('dropzone');
 const spinner = document.getElementById('spinner');

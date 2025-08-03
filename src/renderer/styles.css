@@ -1,6 +1,4 @@
-/* ──────────────────────────────────────────────────────────────
-   Global variables & reset
-   ─────────────────────────────────────────────────────────── */
+/* Your application's global styles and reset */
 :root {
   --brand: #6e5df6;
   --brand-light: #9187ff;
@@ -76,7 +74,10 @@ header {
 }
 
 #logo {
-  width: 200px; /* Increased size for template-design branch */
+  width: 200px;
+  height: auto;
+  display: block; /* Ensure it behaves as a block for margin auto */
+  margin: 0 auto; /* Center the block element */
 }
 
 header h1 {
