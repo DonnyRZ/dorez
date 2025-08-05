@@ -1,1 +1,1 @@
-Increase logo size in template-design branch
+feat: Project updates and file changes for template-design branch
