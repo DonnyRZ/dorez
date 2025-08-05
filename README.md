@@ -1,7 +1,6 @@
 # Gemini-CLI Electron Template
 
 A minimal, beginner-friendly scaffold that shows how to wire **Electron + Gemini CLI** together.
-Drop any local codebase folder into the app window and watch Gemini generate a polished `README.md` in seconds—entirely offline.
 
 ---
 
