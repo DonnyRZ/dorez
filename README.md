@@ -16,6 +16,26 @@ This template is designed for developers who want to build desktop AI applicatio
 
 ---
 
+## Installing Gemini CLI
+
+You can install the Gemini CLI in two ways:
+
+1.  **Run without installing:**
+    ```bash
+    npx https://github.com/google-gemini/gemini-cli
+    ```
+
+2.  **Global installation:**
+    ```bash
+    # 1. Install the CLI globally
+    npm install -g @google/gemini-cli
+
+    # 2. Run the CLI
+    gemini
+    ```
+
+---
+
 ## Quick Start
 
 To get started with this template, follow these steps:
@@ -23,8 +43,8 @@ To get started with this template, follow these steps:
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-org/gemini-electron-template.git
-    cd gemini-electron-template
+    git clone https://github.com/DonnyRZ/dorez.git
+    cd dorez
     ```
 
 2.  **Install Node.js dependencies:**
